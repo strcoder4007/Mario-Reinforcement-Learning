@@ -1,6 +1,52 @@
-# Mario-Reinforcement-Learning
-Teaching a Dueling DQN network to learn how play Mario
+### Mario-Reinforcement-Learning
 
-<code>
-python -m retro.import
-</code>
+The Mario-Reinforcement-Learning project aims to train an artificial intelligence (AI) agent to achieve proficiency in playing Super Mario Bros. through the application of reinforcement learning techniques. Specifically, it utilizes the Proximal Policy Optimization (PPO) algorithm from Stable Baselines 3. The AI agent learns to navigate the iconic game environment, surmount obstacles, and strategically collect rewards such as coins and power-ups. This project not only demonstrates the capabilities of modern reinforcement learning algorithms but also explores their application in mastering complex, real-time video game scenarios.
+
+## Installation
+
+To install the required dependencies, you can use `pip` with the provided `requirements.txt` file.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/strcoder4007/Mario-Reinforcement-Learning.git
+   cd Mario-Reinforcement-Learning
+   ```
+
+2. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   This command will install all necessary packages including `gym`, `gym-retro`, and `stable-baselines3`.
+
+3. Import the ROM for Super Mario Bros. into gym-retro:
+
+   ```bash
+   python -m retro.import
+   ```
+
+## Description
+
+This project aims to train an AI agent to master the classic video game Super Mario Bros. using reinforcement learning techniques. The agent learns to navigate the game environment, avoid obstacles, and collect rewards (like coins and power-ups) through the implementation of the Proximal Policy Optimization (PPO) algorithm provided by Stable Baselines 3.
+
+## Usage
+
+1. After installing the dependencies, you can train the agent by running:
+
+   ```bash
+   python train.py
+   ```
+
+   This command will start the training process using the PPO algorithm.
+
+2. Monitor training progress and visualize results using Tensorboard visualizations. Logs are stored in the `board` folder.
+
+## Credits
+
+- [Stable Baselines 3](https://github.com/DLR-RM/stable-baselines3): For providing efficient implementations of reinforcement learning algorithms.
+- [OpenAI Gym](https://github.com/openai/gym) and [gym-retro](https://github.com/openai/retro): For providing the environments to train and test the AI agent.
+- Nintendo: For creating the classic game Super Mario Bros.
+
+---
