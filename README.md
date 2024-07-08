@@ -8,10 +8,9 @@ The AI agent learns to navigate the iconic game environment, surmount obstacles,
 
 ## Training
 
-It took around 18 hours of training on a local Nvidia RTX 4070 Ti Super (16GB) for 5 million timesteps. 
+It total it took around 18 hours of training on a local Nvidia RTX 4070 Ti Super (16GB) for 5 million timesteps. 
 
-![Training Photo 1](/images/mario_ppo_training_1.png)
-![Training Photo 2](/images/mario_ppo_training_2.png)
+![Training Photo 1](/images/mario_ppo_training_1.png) ![Training Photo 2](/images/mario_ppo_training_2.png)
 
 ## Installation
 
@@ -38,9 +37,10 @@ To install the required dependencies, you can use `pip` with the provided `requi
    python -m retro.import
    ```
 
-## Description
+## Pre-trained Model
 
-This project aims to train an AI agent to master the classic video game Super Mario Bros. using reinforcement learning techniques. The agent learns to navigate the game environment, avoid obstacles, and collect rewards (like coins and power-ups) through the implementation of the Proximal Policy Optimization (PPO) algorithm provided by Stable Baselines 3.
+Checkpoint for a trained Mario: https://drive.google.com/file/d/1RRwhSMUrpBBRyAsfHLPGt1rlYFoiuus2/view?usp=sharing
+
 
 ## Usage
 
