@@ -1,12 +1,17 @@
-# Mario-Reinforcement-Learning
+# Mario Reinforcement Learning
 
-The Mario-Reinforcement-Learning project aims to train an artificial intelligence (AI) agent to achieve proficiency in playing Super Mario Bros. through the application of reinforcement learning techniques. Specifically, it utilizes the Proximal Policy Optimization (PPO) algorithm from Stable Baselines 3. 
+This project aims to train an artificial intelligence (AI) agent to achieve proficiency in playing Super Mario Bros. through the application of reinforcement learning techniques. Specifically, it utilizes the Proximal Policy Optimization (PPO) algorithm from Stable Baselines 3. 
+
+![Playing GIF 1](/images/mario_ppo.gif)
 
 The AI agent learns to navigate the iconic game environment, surmount obstacles, and strategically collect rewards such as coins and power-ups. This project not only demonstrates the capabilities of modern reinforcement learning algorithms but also explores their application in mastering complex, real-time video game scenarios.
 
 ## Training
 
 It took around 18 hours of training on a local Nvidia RTX 4070 Ti Super (16GB) for 5 million timesteps. 
+
+![Training Photo 1](/images/mario_ppo_training_1.png)
+![Training Photo 2](/images/mario_ppo_training_2.png)
 
 ## Installation
 
@@ -48,7 +53,11 @@ This project aims to train an AI agent to master the classic video game Super Ma
    This command will start the training process using the PPO algorithm.
    After/during training the best model will be saved in `/tmp/` directory.
 
-2. Monitor training progress and visualize results using Tensorboard visualizations. Logs are stored in the `board` folder.
+2. Monitor training progress and visualize results using Tensorboard visualizations. Logs are stored in the `board` folder. Use it by running:
+
+    ```bash
+    tensorboard --logdir "board"
+    ```
 
 3. You can watch the agent playing the game using the `best_model.zip` in `/tmp/` directory by running:
 

@@ -1,4 +1,7 @@
 import retro
+import imageio
+import numpy as np
+import cv2
 from stable_baselines3 import PPO
 from stable_baselines3.common.atari_wrappers import MaxAndSkipEnv
 
@@ -11,20 +14,22 @@ def main():
     obs = env.reset()
     done = False
 
+    images = []
+    img = env.render(mode="rgb_array")
+
     last5Rewards = []
 
-    yesprint = 0
-
-    while not done: 
+    while not done:
+        images.append(img)
         action, state = model.predict(obs)
         obs, reward, done, info = env.step(action)
-        if len(last5Rewards) == 10:
-            last5Rewards = []
-        last5Rewards.append(reward)
-        if yesprint%10 == 0:
-            print(f"min reward: {min(last5Rewards)} |||| max reward: {max(last5Rewards)}")
-        yesprint += 1
-        env.render()
+
+        # env.render()
+        img = env.render(mode="rgb_array")
+
+
+    
+    imageio.mimsave("mario_ppo.gif", [np.array(img) for i, img in enumerate(images) if i%2 == 0], fps=29)
 
 
 if __name__ == "__main__":
