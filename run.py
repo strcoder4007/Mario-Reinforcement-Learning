@@ -25,12 +25,17 @@ def main():
         obs, reward, done, info = env.step(action)
 
         # env.render()
+        resized_image = cv2.resize(img, (480, 480))
+        resized_image = cv2.cvtColor(resized_image, cv2.COLOR_RGB2BGR)
+        cv2.imshow("Frame", resized_image)
         img = env.render(mode="rgb_array")
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+        
 
-
-    
     imageio.mimsave("mario_ppo.gif", [np.array(img) for i, img in enumerate(images) if i%2 == 0], fps=29)
-
+    env.close()
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
