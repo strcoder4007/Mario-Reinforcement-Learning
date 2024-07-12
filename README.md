@@ -8,7 +8,7 @@ The AI agent learns to navigate the iconic game environment, surmount obstacles,
 
 ## Training
 
-It total it took around 18 hours of training on a local Nvidia RTX 4070 Ti Super (16GB) for 5 million timesteps. 
+It total it took around 10 hours of training on a local Nvidia RTX 4070 Ti Super (16GB) for 2.5 million timesteps. 
 
 ![Training Photo 1](/images/mario_ppo_training_1.png)
 ![Training Photo 2](/images/mario_ppo_training_2.png)
